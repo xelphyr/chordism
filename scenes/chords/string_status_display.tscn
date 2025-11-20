@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqb3dn8if01uw"]
+
+[ext_resource type="Texture2D" uid="uid://bl7vd7t4jur71" path="res://images/mute.png" id="1_xo7pf"]
+[ext_resource type="Script" uid="uid://bvhir1415ju2x" path="res://scripts/string_status_display.gd" id="1_y2k22"]
+
+[node name="StringStatusDisplay" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xo7pf")
+script = ExtResource("1_y2k22")

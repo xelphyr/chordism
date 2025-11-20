@@ -1,0 +1,410 @@
+[gd_scene load_steps=12 format=3 uid="uid://shectcmhp6fx"]
+
+[ext_resource type="Texture2D" uid="uid://fpct7omd16sd" path="res://images/Fretboard_noindent.png" id="1_f73ly"]
+[ext_resource type="Script" uid="uid://btmfh71ks2usi" path="res://chord_display.gd" id="2_71bgv"]
+[ext_resource type="PackedScene" uid="uid://bdhefbti3v2d4" path="res://scenes/note.tscn" id="2_ntq08"]
+[ext_resource type="Script" uid="uid://cqbnjn6tl2p2a" path="res://scripts/note.gd" id="3_od3xn"]
+[ext_resource type="PackedScene" uid="uid://dqb3dn8if01uw" path="res://scenes/chords/string_status_display.tscn" id="4_71bgv"]
+[ext_resource type="Script" uid="uid://cegssy6cqfx2o" path="res://scripts/chord_shape.gd" id="4_gxk1w"]
+
+[sub_resource type="Resource" id="Resource_od3xn"]
+script = ExtResource("3_od3xn")
+string = 3
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_gxk1w"]
+script = ExtResource("3_od3xn")
+string = 4
+fret = 2
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_qy3kl"]
+script = ExtResource("3_od3xn")
+string = 5
+fret = 3
+finger = 2
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_1gsxa"]
+script = ExtResource("3_od3xn")
+string = 6
+fret = 2
+finger = 1
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_65nh0"]
+script = ExtResource("4_gxk1w")
+notes = Array[ExtResource("3_od3xn")]([SubResource("Resource_od3xn"), SubResource("Resource_gxk1w"), SubResource("Resource_qy3kl"), SubResource("Resource_1gsxa")])
+metadata/_custom_type_script = "uid://cegssy6cqfx2o"
+
+[node name="Control" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 111.0
+offset_top = 121.0
+offset_right = -881.0
+offset_bottom = -287.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_f73ly")
+script = ExtResource("2_71bgv")
+shape = SubResource("Resource_65nh0")
+
+[node name="LowestFretNum" type="Label" parent="."]
+layout_mode = 0
+offset_left = -24.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="Notes" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="1_1" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = -7.0
+offset_top = 18.0
+offset_right = -31.0
+offset_bottom = -6.0
+finger = 2
+
+[node name="1_2" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = -7.0
+offset_top = 65.0
+offset_right = -31.0
+offset_bottom = 41.0
+finger = 2
+
+[node name="1_3" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = -5.0
+offset_top = 110.0
+offset_right = -29.0
+offset_bottom = 86.0
+finger = 2
+
+[node name="1_4" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = -6.0
+offset_top = 157.0
+offset_right = -30.0
+offset_bottom = 133.0
+finger = 2
+
+[node name="1_5" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = -6.0
+offset_top = 208.0
+offset_right = -30.0
+offset_bottom = 184.0
+finger = 2
+
+[node name="2_1" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 25.0
+offset_top = 18.0
+offset_right = 1.0
+offset_bottom = -6.0
+finger = 2
+
+[node name="2_2" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 25.0
+offset_top = 65.0
+offset_right = 1.0
+offset_bottom = 41.0
+finger = 2
+
+[node name="2_3" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 25.0
+offset_top = 110.0
+offset_right = 1.0
+offset_bottom = 86.0
+finger = 2
+
+[node name="2_4" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 26.0
+offset_top = 158.0
+offset_right = 2.0
+offset_bottom = 134.0
+finger = 2
+
+[node name="2_5" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 26.0
+offset_top = 207.0
+offset_right = 2.0
+offset_bottom = 183.0
+finger = 2
+
+[node name="3_1" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 58.0
+offset_top = 18.0
+offset_right = 34.0
+offset_bottom = -6.0
+finger = 2
+
+[node name="3_2" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 58.0
+offset_top = 65.0
+offset_right = 34.0
+offset_bottom = 41.0
+finger = 2
+
+[node name="3_3" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 58.0
+offset_top = 110.0
+offset_right = 34.0
+offset_bottom = 86.0
+finger = 2
+
+[node name="3_4" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 59.0
+offset_top = 158.0
+offset_right = 35.0
+offset_bottom = 134.0
+finger = 2
+
+[node name="3_5" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 59.0
+offset_top = 207.0
+offset_right = 35.0
+offset_bottom = 183.0
+finger = 2
+
+[node name="4_1" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 87.0
+offset_top = 18.0
+offset_right = 63.0
+offset_bottom = -6.0
+finger = 2
+
+[node name="4_2" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 87.0
+offset_top = 65.0
+offset_right = 63.0
+offset_bottom = 41.0
+finger = 2
+
+[node name="4_3" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 87.0
+offset_top = 110.0
+offset_right = 63.0
+offset_bottom = 86.0
+finger = 2
+
+[node name="4_4" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 88.0
+offset_top = 158.0
+offset_right = 64.0
+offset_bottom = 134.0
+finger = 2
+
+[node name="4_5" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 88.0
+offset_top = 207.0
+offset_right = 64.0
+offset_bottom = 183.0
+finger = 2
+
+[node name="5_1" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 121.0
+offset_top = 18.0
+offset_right = 97.0
+offset_bottom = -6.0
+finger = 2
+
+[node name="5_2" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 121.0
+offset_top = 65.0
+offset_right = 97.0
+offset_bottom = 41.0
+finger = 2
+
+[node name="5_3" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 121.0
+offset_top = 110.0
+offset_right = 97.0
+offset_bottom = 86.0
+finger = 2
+
+[node name="5_4" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 122.0
+offset_top = 158.0
+offset_right = 98.0
+offset_bottom = 134.0
+finger = 2
+
+[node name="5_5" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 122.0
+offset_top = 207.0
+offset_right = 98.0
+offset_bottom = 183.0
+finger = 2
+
+[node name="6_1" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 151.0
+offset_top = 18.0
+offset_right = 127.0
+offset_bottom = -6.0
+finger = 2
+
+[node name="6_2" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 151.0
+offset_top = 65.0
+offset_right = 127.0
+offset_bottom = 41.0
+finger = 2
+
+[node name="6_3" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 151.0
+offset_top = 110.0
+offset_right = 127.0
+offset_bottom = 86.0
+finger = 2
+
+[node name="6_4" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 152.0
+offset_top = 158.0
+offset_right = 128.0
+offset_bottom = 134.0
+finger = 2
+
+[node name="6_5" parent="Notes" instance=ExtResource("2_ntq08")]
+visible = false
+layout_mode = 1
+offset_left = 152.0
+offset_top = 207.0
+offset_right = 128.0
+offset_bottom = 183.0
+finger = 2
+
+[node name="Strings" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="1" parent="Strings" instance=ExtResource("4_71bgv")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -8.0
+offset_top = -16.0
+offset_right = 7.0
+offset_bottom = -1.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="2" parent="Strings" instance=ExtResource("4_71bgv")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 24.0
+offset_top = -16.0
+offset_right = 39.0
+offset_bottom = -1.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="3" parent="Strings" instance=ExtResource("4_71bgv")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 57.0
+offset_top = -16.0
+offset_right = 72.0
+offset_bottom = -1.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="4" parent="Strings" instance=ExtResource("4_71bgv")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 88.0
+offset_top = -16.0
+offset_right = 103.0
+offset_bottom = -1.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="5" parent="Strings" instance=ExtResource("4_71bgv")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 120.0
+offset_top = -17.0
+offset_right = 135.0
+offset_bottom = -2.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="6" parent="Strings" instance=ExtResource("4_71bgv")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 151.0
+offset_top = -16.0
+offset_right = 166.0
+offset_bottom = -1.0
+grow_horizontal = 1
+grow_vertical = 1

@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdhefbti3v2d4"]
+
+[ext_resource type="Texture2D" uid="uid://cn8bedu8xqgtv" path="res://images/note.png" id="1_t3yvt"]
+[ext_resource type="Script" uid="uid://cqcrvcvrj08rt" path="res://note_display.gd" id="2_1bnk6"]
+
+[node name="Note" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1136.0
+offset_bottom = -632.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_t3yvt")
+script = ExtResource("2_1bnk6")
+
+[node name="FingerNumber" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -1.0
+offset_right = 44.0
+offset_bottom = 22.0
+theme_override_font_sizes/font_size = 12
+text = "1"
