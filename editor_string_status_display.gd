@@ -4,7 +4,7 @@ extends TextureRect
 var open_string_tex : Texture2D = preload("res://images/open.png")
 var mute_string_tex : Texture2D = preload("res://images/mute.png")
 
-var state : Enum.StringState = Enum.StringState.OPEN
+var state : Enum.StringState = Enum.StringState.MUTE
 @export var string : int = 1
 
 func set_state(strng : int, new_state: Enum.StringState) -> void:

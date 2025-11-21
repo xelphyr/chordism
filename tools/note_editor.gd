@@ -1,5 +1,6 @@
 @tool
 extends Button
+class_name NoteEditor
 
 signal note_toggled(string:int, fret:int, state:bool)
 signal toggle_request(string:int)

@@ -1,10 +1,98 @@
-[gd_scene load_steps=6 format=3 uid="uid://dkcniv5ybfmmf"]
+[gd_scene load_steps=23 format=3 uid="uid://dkcniv5ybfmmf"]
 
 [ext_resource type="Script" uid="uid://dbjxamci0af1o" path="res://scripts/chord_display.gd" id="1_f73ly"]
-[ext_resource type="Resource" uid="uid://d0sfxpfnry0s5" path="res://scenes/chords/g/gmaj.tres" id="2_kowj7"]
+[ext_resource type="Script" uid="uid://bc2d5fv2b87wn" path="res://scripts/chord_resource.gd" id="2_55bhh"]
 [ext_resource type="PackedScene" uid="uid://shectcmhp6fx" path="res://scenes/shape_display.tscn" id="2_ntq08"]
 [ext_resource type="Texture2D" uid="uid://c85oykm6m62ov" path="res://images/prev.png" id="3_71bgv"]
+[ext_resource type="Script" uid="uid://cegssy6cqfx2o" path="res://scripts/chord_shape.gd" id="3_xkpvp"]
+[ext_resource type="Script" uid="uid://cqbnjn6tl2p2a" path="res://scripts/note.gd" id="4_4ol43"]
 [ext_resource type="Texture2D" uid="uid://b4b8y1n3uc0fo" path="res://images/next.png" id="4_id7bj"]
+
+[sub_resource type="Resource" id="Resource_3k7c5"]
+script = ExtResource("4_4ol43")
+fret = 3
+finger = 1
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_346t3"]
+script = ExtResource("4_4ol43")
+string = 2
+fret = 2
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_8c3o7"]
+script = ExtResource("4_4ol43")
+string = 3
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_82tp6"]
+script = ExtResource("4_4ol43")
+string = 4
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_uwhlt"]
+script = ExtResource("4_4ol43")
+string = 5
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_aclvk"]
+script = ExtResource("4_4ol43")
+string = 6
+fret = 3
+finger = 2
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_7w6py"]
+script = ExtResource("3_xkpvp")
+notes = Array[ExtResource("4_4ol43")]([SubResource("Resource_3k7c5"), SubResource("Resource_346t3"), SubResource("Resource_8c3o7"), SubResource("Resource_82tp6"), SubResource("Resource_uwhlt"), SubResource("Resource_aclvk")])
+metadata/_custom_type_script = "uid://cegssy6cqfx2o"
+
+[sub_resource type="Resource" id="Resource_wyiac"]
+script = ExtResource("4_4ol43")
+fret = 3
+finger = 1
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_5qwwp"]
+script = ExtResource("4_4ol43")
+string = 2
+fret = 2
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_cs0ve"]
+script = ExtResource("4_4ol43")
+string = 3
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_f84jc"]
+script = ExtResource("4_4ol43")
+string = 4
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_dbvkv"]
+script = ExtResource("4_4ol43")
+string = 5
+fret = 3
+finger = 2
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_4qhct"]
+script = ExtResource("4_4ol43")
+string = 6
+fret = 3
+finger = 3
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_q3e5q"]
+script = ExtResource("3_xkpvp")
+notes = Array[ExtResource("4_4ol43")]([SubResource("Resource_wyiac"), SubResource("Resource_5qwwp"), SubResource("Resource_cs0ve"), SubResource("Resource_f84jc"), SubResource("Resource_dbvkv"), SubResource("Resource_4qhct")])
+metadata/_custom_type_script = "uid://cegssy6cqfx2o"
+
+[sub_resource type="Resource" id="Resource_um47y"]
+resource_name = "G"
+script = ExtResource("2_55bhh")
+shapes = Array[ExtResource("3_xkpvp")]([SubResource("Resource_7w6py"), SubResource("Resource_q3e5q")])
+metadata/_custom_type_script = "uid://bc2d5fv2b87wn"
 
 [node name="ChordDisplay" type="Control"]
 layout_mode = 3
@@ -16,7 +104,7 @@ offset_bottom = -313.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_f73ly")
-chord = ExtResource("2_kowj7")
+chord = SubResource("Resource_um47y")
 
 [node name="ShapeDisplay" parent="." instance=ExtResource("2_ntq08")]
 layout_mode = 0
