@@ -1,5 +1,5 @@
 extends TextureRect
-class_name ChordDisplay
+class_name ShapeDisplay
 
 var no_indent_tex : Texture2D = preload("res://images/Fretboard_noindent.png")
 var indent_tex : Texture2D = preload("res://images/Fretboard_indent.png")
@@ -8,10 +8,10 @@ var _shape: ChordShape
 var _shape_dirty := false
 
 
-#TODO: fix the setter
+
 ##The chord shape of the [ChordDisplay]. 
 @export var shape: ChordShape:
-	set(value):
+	set(value): #TODO: fix the setter
 		shape = value
 		_shape = value
 		print("e")
@@ -31,6 +31,7 @@ func _apply_shape() -> void:
 	print("modified")
 	for string in get_node("Strings").get_children():
 		string.enabled = false 
+		string.visible = true
 	for note in $Notes.get_children():
 		note.visible = false
 	
@@ -50,7 +51,6 @@ func _apply_shape() -> void:
 		#filter out invalid notes
 		if note.fret > lowest_fret + 5 or (note.fret != 0 and note.fret - lowest_fret <=0):
 			continue
-		
 		var string_status_display : StringStatusDisplay = $Strings.get_node("%d" % note.string)
 		if string_status_display:
 			if note.fret == 0:

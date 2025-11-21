@@ -1,0 +1,92 @@
+[gd_resource type="Resource" script_class="ChordResource" load_steps=18 format=3 uid="uid://d0sfxpfnry0s5"]
+
+[ext_resource type="Script" uid="uid://bc2d5fv2b87wn" path="res://scripts/chord_resource.gd" id="1_xptwk"]
+[ext_resource type="Script" uid="uid://cegssy6cqfx2o" path="res://scripts/chord_shape.gd" id="2_j43ub"]
+[ext_resource type="Script" uid="uid://cqbnjn6tl2p2a" path="res://scripts/note.gd" id="3_j43ub"]
+
+[sub_resource type="Resource" id="Resource_3k7c5"]
+script = ExtResource("3_j43ub")
+fret = 3
+finger = 1
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_346t3"]
+script = ExtResource("3_j43ub")
+string = 2
+fret = 2
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_8c3o7"]
+script = ExtResource("3_j43ub")
+string = 3
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_82tp6"]
+script = ExtResource("3_j43ub")
+string = 4
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_uwhlt"]
+script = ExtResource("3_j43ub")
+string = 5
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_aclvk"]
+script = ExtResource("3_j43ub")
+string = 6
+fret = 3
+finger = 2
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_7w6py"]
+script = ExtResource("2_j43ub")
+notes = Array[ExtResource("3_j43ub")]([SubResource("Resource_3k7c5"), SubResource("Resource_346t3"), SubResource("Resource_8c3o7"), SubResource("Resource_82tp6"), SubResource("Resource_uwhlt"), SubResource("Resource_aclvk")])
+metadata/_custom_type_script = "uid://cegssy6cqfx2o"
+
+[sub_resource type="Resource" id="Resource_wyiac"]
+script = ExtResource("3_j43ub")
+fret = 3
+finger = 1
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_5qwwp"]
+script = ExtResource("3_j43ub")
+string = 2
+fret = 2
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_cs0ve"]
+script = ExtResource("3_j43ub")
+string = 3
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_f84jc"]
+script = ExtResource("3_j43ub")
+string = 4
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_dbvkv"]
+script = ExtResource("3_j43ub")
+string = 5
+fret = 3
+finger = 2
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_4qhct"]
+script = ExtResource("3_j43ub")
+string = 6
+fret = 3
+finger = 3
+metadata/_custom_type_script = "uid://cqbnjn6tl2p2a"
+
+[sub_resource type="Resource" id="Resource_q3e5q"]
+script = ExtResource("2_j43ub")
+notes = Array[ExtResource("3_j43ub")]([SubResource("Resource_wyiac"), SubResource("Resource_5qwwp"), SubResource("Resource_cs0ve"), SubResource("Resource_f84jc"), SubResource("Resource_dbvkv"), SubResource("Resource_4qhct")])
+metadata/_custom_type_script = "uid://cegssy6cqfx2o"
+
+[resource]
+resource_name = "G"
+script = ExtResource("1_xptwk")
+chord_name = &"G"
+shapes = Array[ExtResource("2_j43ub")]([SubResource("Resource_7w6py"), SubResource("Resource_q3e5q")])
+metadata/_custom_type_script = "uid://bc2d5fv2b87wn"
