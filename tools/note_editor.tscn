@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://5wv6kkww3sv5"]
+
+[ext_resource type="Theme" uid="uid://cpqg1t5ee1ipx" path="res://themes/note_editor.tres" id="1_av7eo"]
+[ext_resource type="Script" uid="uid://b6m4i7k37s2qk" path="res://tools/note_editor.gd" id="2_av7eo"]
+[ext_resource type="Texture2D" uid="uid://cn8bedu8xqgtv" path="res://images/note.png" id="3_yjv2q"]
+
+[node name="NoteEditor" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1136.0
+offset_bottom = -618.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_av7eo")
+script = ExtResource("2_av7eo")
+value = 1
+
+[node name="NoteTexture" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_top = 6.0
+offset_right = 17.0
+offset_bottom = 23.0
+mouse_filter = 2
+texture = ExtResource("3_yjv2q")
+
+[node name="FingerNumber" type="Label" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 39.0
+offset_bottom = 25.0
+theme_override_font_sizes/font_size = 12
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

@@ -1,0 +1,461 @@
+[gd_scene load_steps=9 format=3 uid="uid://ct7jrx4odbeid"]
+
+[ext_resource type="Texture2D" uid="uid://fpct7omd16sd" path="res://images/Fretboard_noindent.png" id="1_0fhye"]
+[ext_resource type="Script" uid="uid://dfaaumq0q822" path="res://tools/chord_editor.gd" id="1_w432l"]
+[ext_resource type="PackedScene" uid="uid://5wv6kkww3sv5" path="res://tools/note_editor.tscn" id="2_xsitv"]
+[ext_resource type="Texture2D" uid="uid://bl7vd7t4jur71" path="res://images/mute.png" id="3_w432l"]
+[ext_resource type="Script" uid="uid://63jnj3p250hy" path="res://editor_string_status_display.gd" id="5_w432l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w8n4k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0fhye"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xsitv"]
+
+[node name="ChordEditor" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w432l")
+
+[node name="ShapeDisplay" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 474.0
+offset_top = 114.0
+offset_right = 634.0
+offset_bottom = 354.0
+texture = ExtResource("1_0fhye")
+
+[node name="Notes" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 474.0
+offset_top = 114.0
+offset_right = 634.0
+offset_bottom = 353.0
+
+[node name="1_1" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = -7.0
+offset_top = 10.0
+offset_right = -150.0
+offset_bottom = -196.0
+fret = 1
+string = 1
+value = 0
+
+[node name="1_2" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = -7.0
+offset_top = 55.0
+offset_right = -150.0
+offset_bottom = -151.0
+fret = 2
+string = 1
+value = 0
+
+[node name="1_3" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = -6.0
+offset_top = 101.0
+offset_right = -149.0
+offset_bottom = -105.0
+fret = 3
+string = 1
+value = 0
+
+[node name="1_4" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = -7.0
+offset_top = 151.0
+offset_right = -150.0
+offset_bottom = -55.0
+fret = 4
+string = 1
+value = 0
+
+[node name="1_5" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = -7.0
+offset_top = 197.0
+offset_right = -150.0
+offset_bottom = -9.0
+fret = 5
+string = 1
+value = 0
+
+[node name="2_1" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 25.0
+offset_top = 10.0
+offset_right = -118.0
+offset_bottom = -196.0
+fret = 1
+string = 2
+value = 0
+
+[node name="2_2" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 25.0
+offset_top = 55.0
+offset_right = -118.0
+offset_bottom = -151.0
+fret = 2
+string = 2
+value = 0
+
+[node name="2_3" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 26.0
+offset_top = 101.0
+offset_right = -117.0
+offset_bottom = -105.0
+fret = 3
+string = 2
+value = 0
+
+[node name="2_4" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 25.0
+offset_top = 151.0
+offset_right = -118.0
+offset_bottom = -55.0
+fret = 4
+string = 2
+value = 0
+
+[node name="2_5" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 25.0
+offset_top = 197.0
+offset_right = -118.0
+offset_bottom = -9.0
+fret = 5
+string = 2
+value = 0
+
+[node name="3_1" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 57.0
+offset_top = 10.0
+offset_right = -86.0
+offset_bottom = -196.0
+fret = 1
+string = 3
+value = 0
+
+[node name="3_2" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 57.0
+offset_top = 55.0
+offset_right = -86.0
+offset_bottom = -151.0
+fret = 2
+string = 3
+value = 0
+
+[node name="3_3" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 58.0
+offset_top = 101.0
+offset_right = -85.0
+offset_bottom = -105.0
+fret = 3
+string = 3
+value = 0
+
+[node name="3_4" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 57.0
+offset_top = 151.0
+offset_right = -86.0
+offset_bottom = -55.0
+fret = 4
+string = 3
+value = 0
+
+[node name="3_5" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 57.0
+offset_top = 197.0
+offset_right = -86.0
+offset_bottom = -9.0
+fret = 5
+string = 3
+value = 0
+
+[node name="4_1" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 86.0
+offset_top = 10.0
+offset_right = -57.0
+offset_bottom = -196.0
+fret = 1
+string = 4
+value = 0
+
+[node name="4_2" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 86.0
+offset_top = 55.0
+offset_right = -57.0
+offset_bottom = -151.0
+fret = 2
+string = 4
+value = 0
+
+[node name="4_3" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 87.0
+offset_top = 101.0
+offset_right = -56.0
+offset_bottom = -105.0
+fret = 3
+string = 4
+value = 0
+
+[node name="4_4" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 86.0
+offset_top = 151.0
+offset_right = -57.0
+offset_bottom = -55.0
+fret = 4
+string = 4
+value = 0
+
+[node name="4_5" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 86.0
+offset_top = 197.0
+offset_right = -57.0
+offset_bottom = -9.0
+fret = 5
+string = 4
+value = 0
+
+[node name="5_1" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 120.0
+offset_top = 10.0
+offset_right = -23.0
+offset_bottom = -196.0
+fret = 1
+string = 5
+value = 0
+
+[node name="5_2" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 120.0
+offset_top = 55.0
+offset_right = -23.0
+offset_bottom = -151.0
+fret = 2
+string = 5
+value = 0
+
+[node name="5_3" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 121.0
+offset_top = 101.0
+offset_right = -22.0
+offset_bottom = -105.0
+fret = 3
+string = 5
+value = 0
+
+[node name="5_4" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 120.0
+offset_top = 151.0
+offset_right = -23.0
+offset_bottom = -55.0
+fret = 4
+string = 5
+value = 0
+
+[node name="5_5" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 120.0
+offset_top = 197.0
+offset_right = -23.0
+offset_bottom = -9.0
+fret = 5
+string = 5
+value = 0
+
+[node name="6_1" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 149.0
+offset_top = 10.0
+offset_right = 6.0
+offset_bottom = -196.0
+fret = 1
+string = 6
+value = 0
+
+[node name="6_2" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 149.0
+offset_top = 55.0
+offset_right = 6.0
+offset_bottom = -151.0
+fret = 2
+string = 6
+value = 0
+
+[node name="6_3" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 150.0
+offset_top = 101.0
+offset_right = 7.0
+offset_bottom = -105.0
+fret = 3
+string = 6
+value = 0
+
+[node name="6_4" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 149.0
+offset_top = 151.0
+offset_right = 6.0
+offset_bottom = -55.0
+fret = 4
+string = 6
+value = 0
+
+[node name="6_5" parent="Notes" instance=ExtResource("2_xsitv")]
+layout_mode = 1
+offset_left = 149.0
+offset_top = 197.0
+offset_right = 6.0
+offset_bottom = -9.0
+fret = 5
+string = 6
+value = 0
+
+[node name="Strings" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 474.0
+offset_top = 114.0
+offset_right = 514.0
+offset_bottom = 154.0
+mouse_filter = 2
+
+[node name="1" type="TextureRect" parent="Strings"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = -16.0
+offset_right = 7.0
+offset_bottom = -1.0
+mouse_filter = 2
+texture = ExtResource("3_w432l")
+script = ExtResource("5_w432l")
+
+[node name="2" type="TextureRect" parent="Strings"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = -16.0
+offset_right = 39.0
+offset_bottom = -1.0
+mouse_filter = 2
+texture = ExtResource("3_w432l")
+script = ExtResource("5_w432l")
+string = 2
+
+[node name="3" type="TextureRect" parent="Strings"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = -16.0
+offset_right = 72.0
+offset_bottom = -1.0
+mouse_filter = 2
+texture = ExtResource("3_w432l")
+script = ExtResource("5_w432l")
+string = 3
+
+[node name="4" type="TextureRect" parent="Strings"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = -16.0
+offset_right = 103.0
+offset_bottom = -1.0
+mouse_filter = 2
+texture = ExtResource("3_w432l")
+script = ExtResource("5_w432l")
+string = 4
+
+[node name="5" type="TextureRect" parent="Strings"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = -17.0
+offset_right = 135.0
+offset_bottom = -2.0
+mouse_filter = 2
+texture = ExtResource("3_w432l")
+script = ExtResource("5_w432l")
+string = 5
+
+[node name="6" type="TextureRect" parent="Strings"]
+layout_mode = 0
+offset_left = 151.0
+offset_top = -16.0
+offset_right = 166.0
+offset_bottom = -1.0
+mouse_filter = 2
+texture = ExtResource("3_w432l")
+script = ExtResource("5_w432l")
+string = 6
+
+[node name="LowestFretNum" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 437.0
+offset_top = 101.0
+offset_right = 461.0
+offset_bottom = 147.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_w8n4k")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0fhye")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_xsitv")
+placeholder_text = "0"
+
+[node name="Confirm" type="Button" parent="."]
+layout_mode = 0
+offset_left = 415.0
+offset_top = 440.0
+offset_right = 707.0
+offset_bottom = 490.0
+text = "Confirm Shape"
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_right = 146.0
+offset_bottom = 200.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ItemList"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ItemList/HBoxContainer"]
+layout_mode = 2
+text = "Chord Name"
+
+[node name="OptionButton" type="OptionButton" parent="ItemList/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ItemList"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ChordType" type="Label" parent="ItemList/HBoxContainer2"]
+layout_mode = 2
+text = "Chord Name"
+
+[node name="OptionButton" type="OptionButton" parent="ItemList/HBoxContainer2"]
+layout_mode = 2
+item_count = 1
+popup/item_0/id = 0

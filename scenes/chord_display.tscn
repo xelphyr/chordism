@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dkcniv5ybfmmf"]
 
 [ext_resource type="Script" uid="uid://dbjxamci0af1o" path="res://scripts/chord_display.gd" id="1_f73ly"]
-[ext_resource type="Resource" uid="uid://d0sfxpfnry0s5" path="res://scenes/chords/gmaj.tres" id="2_kowj7"]
+[ext_resource type="Resource" uid="uid://d0sfxpfnry0s5" path="res://scenes/chords/g/gmaj.tres" id="2_kowj7"]
 [ext_resource type="PackedScene" uid="uid://shectcmhp6fx" path="res://scenes/shape_display.tscn" id="2_ntq08"]
 [ext_resource type="Texture2D" uid="uid://c85oykm6m62ov" path="res://images/prev.png" id="3_71bgv"]
 [ext_resource type="Texture2D" uid="uid://b4b8y1n3uc0fo" path="res://images/next.png" id="4_id7bj"]
