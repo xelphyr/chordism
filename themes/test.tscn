@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6s65m81um8pb"]
+
+[ext_resource type="Script" uid="uid://crsqi5pnmm5wj" path="res://test.gd" id="1_onr7g"]
+[ext_resource type="PackedScene" uid="uid://dgg5pydn4hhih" path="res://tools/chord_settings.tscn" id="2_hiktj"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_onr7g")
+
+[node name="ChordSettings" parent="." instance=ExtResource("2_hiktj")]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 112.0
+offset_right = 229.0
+offset_bottom = 312.0

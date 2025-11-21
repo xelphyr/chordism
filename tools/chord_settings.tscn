@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgg5pydn4hhih"]
+
+[ext_resource type="Script" uid="uid://bf1c7onw8iq6q" path="res://scripts/editorui_chord_names.gd" id="1_51xny"]
+[ext_resource type="Script" uid="uid://cgpt5mca57xl7" path="res://scripts/editorui_chord_type.gd" id="2_6kag3"]
+
+[node name="ChordSettings" type="VBoxContainer"]
+offset_left = 120.0
+offset_top = 120.0
+offset_right = 266.0
+offset_bottom = 320.0
+
+[node name="ChordName" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="ChordNameLabel" type="Label" parent="ChordName"]
+layout_mode = 2
+text = "Chord Name"
+
+[node name="ChordName" type="OptionButton" parent="ChordName"]
+layout_mode = 2
+script = ExtResource("1_51xny")
+
+[node name="ChordType" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="ChordTypeLabel" type="Label" parent="ChordType"]
+layout_mode = 2
+text = "Chord Type"
+
+[node name="ChordType" type="OptionButton" parent="ChordType"]
+layout_mode = 2
+script = ExtResource("2_6kag3")

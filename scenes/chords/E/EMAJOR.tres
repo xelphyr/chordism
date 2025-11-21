@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="ChordResource" load_steps=11 format=3 uid="uid://xxk7v7ejiqm2"]
+
+[ext_resource type="Script" uid="uid://bc2d5fv2b87wn" path="res://scripts/chord_resource.gd" id="1_r1isx"]
+[ext_resource type="Script" uid="uid://cegssy6cqfx2o" path="res://scripts/chord_shape.gd" id="2_m4vpx"]
+[ext_resource type="Script" uid="uid://cqbnjn6tl2p2a" path="res://scripts/note.gd" id="3_uoaaw"]
+
+[sub_resource type="Resource" id="Resource_r1isx"]
+script = ExtResource("3_uoaaw")
+string = 2
+fret = 2
+finger = 2
+
+[sub_resource type="Resource" id="Resource_m4vpx"]
+script = ExtResource("3_uoaaw")
+string = 3
+fret = 2
+finger = 3
+
+[sub_resource type="Resource" id="Resource_uoaaw"]
+script = ExtResource("3_uoaaw")
+string = 4
+fret = 1
+finger = 1
+
+[sub_resource type="Resource" id="Resource_4ej13"]
+script = ExtResource("3_uoaaw")
+
+[sub_resource type="Resource" id="Resource_65csi"]
+script = ExtResource("3_uoaaw")
+string = 5
+
+[sub_resource type="Resource" id="Resource_istvl"]
+script = ExtResource("3_uoaaw")
+string = 6
+
+[sub_resource type="Resource" id="Resource_dkf06"]
+script = ExtResource("2_m4vpx")
+notes = Array[ExtResource("3_uoaaw")]([SubResource("Resource_r1isx"), SubResource("Resource_m4vpx"), SubResource("Resource_uoaaw"), SubResource("Resource_4ej13"), SubResource("Resource_65csi"), SubResource("Resource_istvl")])
+
+[resource]
+script = ExtResource("1_r1isx")
+chord_name = 4
+shapes = Array[ExtResource("2_m4vpx")]([SubResource("Resource_dkf06")])

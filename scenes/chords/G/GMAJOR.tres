@@ -1,0 +1,78 @@
+[gd_resource type="Resource" script_class="ChordResource" load_steps=18 format=3 uid="uid://dxgjg6k0kqydh"]
+
+[ext_resource type="Script" uid="uid://bc2d5fv2b87wn" path="res://scripts/chord_resource.gd" id="1_nq1ye"]
+[ext_resource type="Script" uid="uid://cegssy6cqfx2o" path="res://scripts/chord_shape.gd" id="2_5i3xn"]
+[ext_resource type="Script" uid="uid://cqbnjn6tl2p2a" path="res://scripts/note.gd" id="3_b5w0d"]
+
+[sub_resource type="Resource" id="Resource_k4fya"]
+script = ExtResource("3_b5w0d")
+fret = 3
+finger = 2
+
+[sub_resource type="Resource" id="Resource_bcngy"]
+script = ExtResource("3_b5w0d")
+string = 2
+fret = 2
+finger = 1
+
+[sub_resource type="Resource" id="Resource_3lo3u"]
+script = ExtResource("3_b5w0d")
+string = 6
+fret = 3
+finger = 3
+
+[sub_resource type="Resource" id="Resource_0ppjq"]
+script = ExtResource("3_b5w0d")
+string = 3
+
+[sub_resource type="Resource" id="Resource_kx2qn"]
+script = ExtResource("3_b5w0d")
+string = 4
+
+[sub_resource type="Resource" id="Resource_ohxmv"]
+script = ExtResource("3_b5w0d")
+string = 5
+
+[sub_resource type="Resource" id="Resource_r2x6y"]
+script = ExtResource("2_5i3xn")
+notes = Array[ExtResource("3_b5w0d")]([SubResource("Resource_k4fya"), SubResource("Resource_bcngy"), SubResource("Resource_3lo3u"), SubResource("Resource_0ppjq"), SubResource("Resource_kx2qn"), SubResource("Resource_ohxmv")])
+
+[sub_resource type="Resource" id="Resource_nq1ye"]
+script = ExtResource("3_b5w0d")
+fret = 3
+finger = 2
+
+[sub_resource type="Resource" id="Resource_5i3xn"]
+script = ExtResource("3_b5w0d")
+string = 2
+fret = 2
+finger = 1
+
+[sub_resource type="Resource" id="Resource_b5w0d"]
+script = ExtResource("3_b5w0d")
+string = 5
+fret = 3
+finger = 3
+
+[sub_resource type="Resource" id="Resource_bm0l0"]
+script = ExtResource("3_b5w0d")
+string = 6
+fret = 3
+finger = 4
+
+[sub_resource type="Resource" id="Resource_bfl1n"]
+script = ExtResource("3_b5w0d")
+string = 3
+
+[sub_resource type="Resource" id="Resource_wwphp"]
+script = ExtResource("3_b5w0d")
+string = 4
+
+[sub_resource type="Resource" id="Resource_2mkbg"]
+script = ExtResource("2_5i3xn")
+notes = Array[ExtResource("3_b5w0d")]([SubResource("Resource_nq1ye"), SubResource("Resource_5i3xn"), SubResource("Resource_b5w0d"), SubResource("Resource_bm0l0"), SubResource("Resource_bfl1n"), SubResource("Resource_wwphp")])
+
+[resource]
+script = ExtResource("1_nq1ye")
+chord_name = 7
+shapes = Array[ExtResource("2_5i3xn")]([SubResource("Resource_r2x6y"), SubResource("Resource_2mkbg")])

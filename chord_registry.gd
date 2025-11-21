@@ -29,7 +29,7 @@ static var Fs : Dictionary[Enum.ChordType, ChordResource] = {
 }
 
 static var G : Dictionary[Enum.ChordType, ChordResource] = {
-	Enum.ChordType.MAJOR : preload("res://scenes/chords/g/gmaj.tres")
+	
 }
 
 static var Gs : Dictionary[Enum.ChordType, ChordResource] = {
